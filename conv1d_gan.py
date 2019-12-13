@@ -174,7 +174,7 @@ def load_real_samples():
     X_train = dataset[:,1]
     y_train = idataset[:]
     #(X_train, y_train), (_, _) = mnist.load_data()
-    window=1
+    window=384
     n = ((np.where(np.any(dataxy, axis=1))[0][-1] + 1) // window) * window
     
     xx = scaler.fit_transform(dataxy[:n,0].reshape(-1,1))
